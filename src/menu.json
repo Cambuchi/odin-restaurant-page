@@ -1,0 +1,26 @@
+{
+    "0":{
+        "name":"cup noodles",
+        "description":"The college classic.",
+        "price":"$3.00",
+        "img":"./101 cup noodles.png"
+    },
+    "1":{
+        "name":"cup noodles with beef",
+        "description":"The college classic with protein for the aspiring body builder.",
+        "price":"$5.00",
+        "img":"./102 cup noodles with beef.png"
+    },
+    "2":{
+        "name":"cup noodles with egg",
+        "description":"The college classic, elevated.",
+        "price":"$4.00",
+        "img":"./103 cup noodles with egg.png"
+    },
+    "3":{
+        "name":"cup noodles with shrimp",
+        "description":"The pescetarian college classic.",
+        "price":"$5.00",
+        "img":"./104 cup noodles with shrimp.png"
+    }
+}

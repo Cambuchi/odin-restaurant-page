@@ -1,0 +1,23 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "Javascript DOM manipulation for the ODIN project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cambuchi/odin-restaurant-page.git"
+  },
+  "author": "Cam Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cambuchi/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/Cambuchi/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
+  }
+}
