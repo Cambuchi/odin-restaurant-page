@@ -1,1 +1,5 @@
-alert("Test message for index.js");
+import './style.css';
+import {initialize} from './init';
+import './modern-normalize.css';
+
+initialize();
