@@ -1,3 +1,5 @@
+import contactImg from './images/contact.png';
+
 const contact = () => {
     //target content div
     const content = document.getElementById('content');
@@ -11,55 +13,74 @@ const contact = () => {
     contactBtn.className = 'active';
 
     //create contact content
-    //create the home main image
+    //create the contact main image
     const img = new Image();
-    img.src = KennyImg;
-    img.id = 'home-img';
+    img.src = contactImg;
+    img.id = 'contact-img';
 
-    //create the home main blurb
-    const info = document.createElement('p');
-    info.id = 'home-text';
-    info.textContent = "CAW, kids, it's Kenny Crow! Come on down to the Crow's Nest for a mouthful of happiness! Fly down to the original Nest in Old Lestallum for a real treat! Nothin' tastes better than what we make together at the Crow's Nest! - Kenny Crow";
+    //contact information
+    const contact = {'Phone':'+1-555-555-5555', 'Email':'CrowsCafeDiner@finalfantasyXV.com'}
+    const locations = ['Longwythe Rest Area', 'Coernix Station - Alstor', 'Cauthess Rest Area', 'Taelpar Rest Area', 'Old Lestallum']
 
-    //create the time slots for the hours
-    const hoursHead = document.createElement('h2');
-    hoursHead.id = 'home-hours-head';
-    hoursHead.textContent = 'HOURS OPEN:';
+    //contact main info
+    const infoHead = document.createElement('h2');
+    infoHead.id = 'contact-info-head';
+    infoHead.textContent = 'We hope to see you soon!';
 
-    const hours = document.createElement('div');
-    hours.id = 'home-hours';
-    const weekdays = {'Sunday':'9:00 AM - 10:00 PM', 
-                    'Monday':'CLOSED', 
-                    'Tuesday':'8:00 AM - 9:00 PM', 
-                    'Wednesday':'8:00 AM - 9:00 PM', 
-                    'Thursday':'8:00 AM - 9:00 PM', 
-                    'Friday':'8:00 AM - 9:00 PM', 
-                    'Saturday':'9:00 AM - 10:00 PM'};
+    let info = document.createElement('div');
+    info.id = 'contact-info';
 
-    for (let i = 0; i < Object.keys(weekdays).length; i++) {
-        let timeslot = document.createElement('div');
-        timeslot.className = 'home-timeslot';
-        timeslot.innerHTML = '';
+    let phone = document.createElement('div');
+    phone.id = 'contact-phone';
 
-        let day = document.createElement('div');
-        day.textContent = Object.keys(weekdays)[i];
+    let phoneText = document.createElement('h3');
+    phoneText.textContent = 'Call us at:';
 
-        let time = document.createElement('div');
-        time.textContent = Object.values(weekdays)[i];
+    let phoneNum = document.createElement('h3');
+    phoneNum.textContent = contact['Phone'];
 
-        timeslot.appendChild(day);
-        timeslot.appendChild(time);
-        hours.appendChild(timeslot);
+    phone.appendChild(phoneText);
+    phone.appendChild(phoneNum);
+
+    let email = document.createElement('div');
+    email.id = 'contact-email';
+
+    let emailText = document.createElement('h3');
+    emailText.textContent = 'Email:';
+
+    let emailAdd = document.createElement('h3');
+    emailAdd.textContent = contact['Email'];
+
+    email.appendChild(emailText);
+    email.appendChild(emailAdd);
+
+    info.appendChild(phone);
+    info.appendChild(email);
+
+    //create the slots for the locations
+    const locationsHead = document.createElement('h2');
+    locationsHead.id = 'contact-locations-head';
+    locationsHead.textContent = 'Our Locations:';
+
+    const locationsTable = document.createElement('div');
+    locationsTable.id = 'contact-locations';
+
+    for (let i = 0; i < locations.length; i++) {
+        let slot = document.createElement('div');
+        slot.className = 'contact-slot';
+        slot.textContent = locations[i]
+        locationsTable.appendChild(slot);
     }
 
     //wipe anything inside content div
     content.innerHTML = '';
 
-    //add content of home tab
+    //add content of contact tab
     content.appendChild(img);
+    content.appendChild(infoHead)
     content.appendChild(info);
-    content.appendChild(hoursHead);
-    content.appendChild(hours);
+    content.appendChild(locationsHead);
+    content.appendChild(locationsTable);
 }
 
 export { 
