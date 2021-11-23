@@ -6,26 +6,29 @@ const initialize = () => {
     //create the header
     const header = document.createElement('div');
     header.id = 'header';
-    header.textContent = "Crow's Nest Cafe"
+    header.textContent = "Crow's Nest Diner"
     body.appendChild(header)
 
     //create the nav
     const nav = document.createElement('div');
     nav.id = 'nav';
     
-    const about = document.createElement('div');
-    about.textContent = 'About';
-    about.className = 'inactive'
+    const home = document.createElement('div');
+    home.id = 'home-btn'
+    home.textContent = 'Home';
+    home.className = 'inactive'
 
     const menu = document.createElement('div');
+    menu.id = 'menu-btn'
     menu.textContent = 'Menu';
     menu.className = 'inactive'
 
     const contact = document.createElement('div');
+    contact.id = 'contact-btn'
     contact.textContent = 'Contact';
     contact.className = 'inactive'
 
-    nav.appendChild(about);
+    nav.appendChild(home);
     nav.appendChild(menu);
     nav.appendChild(contact);
     body.appendChild(nav);
