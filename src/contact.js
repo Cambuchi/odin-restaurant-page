@@ -19,7 +19,7 @@ const contact = () => {
     img.id = 'contact-img';
 
     //contact information
-    const contact = {'Phone':'+1-555-555-5555', 'Email':'CrowsCafeDiner@finalfantasyXV.com'}
+    const contact = {'Phone':'+1-555-555-5555', 'Email':'CrowsNestDiner@finalfantasyXV.com'}
     const locations = ['Longwythe Rest Area', 'Coernix Station - Alstor', 'Cauthess Rest Area', 'Taelpar Rest Area', 'Old Lestallum']
 
     //contact main info
