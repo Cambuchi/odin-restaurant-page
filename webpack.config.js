@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Crow's Cafe Diner",
+      title: "Crow's Nest Diner",
     }),
   ],
   output: {
